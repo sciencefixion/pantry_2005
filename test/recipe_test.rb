@@ -14,7 +14,6 @@ class RecipeTest < Minitest::Test
   end
 
   def test_it_exists
-
     assert_instance_of Recipe, @recipe1
   end
 
@@ -35,5 +34,6 @@ class RecipeTest < Minitest::Test
     }
 
     assert_equal expected, @recipe1.ingredients_required
+    assert_equal [@ingredient1, @ingredient2], @recipe1.ingredients
   end
 end
