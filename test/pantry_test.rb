@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
+require './lib/ingredient'
 require './lib/pantry'
 
 class PantryTest < Minitest::Test
@@ -16,9 +17,8 @@ class PantryTest < Minitest::Test
   end
 
   def test_it_has_attributes
-    assert_equal {}, @pantry.stock
-
-
+    expected = {}
+    assert_equal expected, @pantry.stock
   end
 
   def test_it_can_restock
